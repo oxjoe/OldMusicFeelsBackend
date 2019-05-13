@@ -1,4 +1,4 @@
-package com.musicfeels.MusicFeels;
+package com.musicfeels.MusicFeels.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-    <title>Cities</title>
+    <title>Chord Progressions</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -9,20 +9,20 @@
 <body>
 <h2>List of Chord Progressions</h2>
 
-<table>
-    <tr>
-        <th>Id</th>
-        <th>Number</th>
-        <th>Name</th>
-        <th>Notes</th>
-    </tr>
-    <tr th:each="chord : ${chordprogression}">
-        <td th:text="${chord.id}">Id</td>
-        <td th:text="${chord.number}">Number</td>
-        <td th:text="${chord.name}">Name</td>
-        <td th:text="${chord.notes}">Notes</td>
-    </tr>
-</table>
+<!--<table>-->
+<!--    <tr>-->
+<!--        <th>Id</th>-->
+<!--        <th>Number</th>-->
+<!--        <th>Name</th>-->
+<!--        <th>Notes</th>-->
+<!--    </tr>-->
+<!--    <tr th:each="chord : ${ChordProgression}">-->
+<!--        <td th:text="${chord.id}">Id</td>-->
+<!--        <td th:text="${chord.number}">Number</td>-->
+<!--        <td th:text="${chord.name}">Name</td>-->
+<!--        <td th:text="${chord.notes}">Notes</td>-->
+<!--    </tr>-->
+<!--</table>-->
 
 </body>
 </html>

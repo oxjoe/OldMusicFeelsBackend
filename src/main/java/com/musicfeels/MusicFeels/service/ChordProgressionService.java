@@ -1,12 +1,15 @@
-package com.musicfeels.MusicFeels;
+package com.musicfeels.MusicFeels.service;
 
+import com.musicfeels.MusicFeels.model.ChordProgression;
+import com.musicfeels.MusicFeels.repository.ChordProgressionRepository;
+import com.musicfeels.MusicFeels.repository.IChordProgression;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class ChordProgressionService implements IChordProgression{
+public class ChordProgressionService implements IChordProgression {
 
   @Autowired
   private ChordProgressionRepository repo;

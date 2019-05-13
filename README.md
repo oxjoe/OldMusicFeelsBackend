@@ -1,5 +1,7 @@
 # MusicFeelsBackend
 
+Access at: http://localhost:8086/
+
 ##### ToDo
 
 - [ ] Incorporate tests (put spring-test back into pom)
