@@ -5,9 +5,9 @@
 -- CREATE DATABASE data;
 DROP TABLE IF EXISTS ChordProgression;
 CREATE TABLE ChordProgression (
-  id INTEGER PRIMARY KEY,
+  id INTEGER,
   numbers TEXT,
   names TEXT,
   notes TEXT
 );
-\echo 'Created Table'
+-- \echo 'Created Table'

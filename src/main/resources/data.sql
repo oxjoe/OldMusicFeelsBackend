@@ -19,4 +19,4 @@ VALUES
     'This is the normal 1-4-5 progression the overall feeling of it is ''Feels strong moving from the root to the fifth'' '
   );
 
-  \echo 'Finished Inserts'
+--   \echo 'Finished Inserts'

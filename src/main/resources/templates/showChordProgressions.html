@@ -7,18 +7,20 @@
 </head>
 
 <body>
-<h2>List of cities</h2>
+<h2>List of Chord Progressions</h2>
 
 <table>
     <tr>
         <th>Id</th>
+        <th>Number</th>
         <th>Name</th>
-        <th>Price</th>
+        <th>Notes</th>
     </tr>
-    <tr th:each="chord : ${ChordProgression}"
-        <td th:text="${city.id}">Id</td>
-        <td th:text="${city.name}">Name</td>
-        <td th:text="${city.population}">Population</td>
+    <tr th:each="chord : ${chordprogression}">
+        <td th:text="${chord.id}">Id</td>
+        <td th:text="${chord.number}">Number</td>
+        <td th:text="${chord.name}">Name</td>
+        <td th:text="${chord.notes}">Notes</td>
     </tr>
 </table>
 
