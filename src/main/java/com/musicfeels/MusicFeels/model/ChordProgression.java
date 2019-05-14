@@ -17,7 +17,8 @@ public class ChordProgression {
   private String names;
   private String notes;
 
-  public ChordProgression(String numbers, String names, String notes) {
+  public ChordProgression(Long id, String numbers, String names, String notes) {
+    this.id = id;
     this.numbers = numbers;
     this.names = names;
     this.notes = notes;
@@ -28,6 +29,10 @@ public class ChordProgression {
 
   public Long getId() {
     return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
   }
 
   public String getNumbers() {
