@@ -7,12 +7,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "ChordProgression")
+@Table(name = "chordprogression")
 public class ChordProgression {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private Integer id;
+  private Long id;
   private String numbers;
   private String names;
   private String notes;
@@ -26,7 +26,7 @@ public class ChordProgression {
   public ChordProgression() {
   }
 
-  public Integer getId() {
+  public Long getId() {
     return id;
   }
 

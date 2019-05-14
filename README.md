@@ -2,6 +2,8 @@
 
 Access at: http://localhost:8086/
 
+Maybe use this?:https://auth0.com/blog/integrating-spring-data-jpa-postgresql-liquibase/
+
 ##### ToDo
 
 - [ ] Incorporate tests (put spring-test back into pom)
@@ -32,4 +34,6 @@ http://zetcode.com/springboot/postgresql/
 https://www.baeldung.com/intro-to-project-lombok
 
 https://www.baeldung.com/spring-bean
+
+https://www.callicoder.com/spring-boot-jpa-hibernate-postgresql-restful-crud-api-example/
 

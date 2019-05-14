@@ -1,5 +1,5 @@
 INSERT INTO
-    ChordProgression (numbers, names, notes)
+    chordprogression (numbers, names, notes)
 VALUES
   (
     '1,5',
