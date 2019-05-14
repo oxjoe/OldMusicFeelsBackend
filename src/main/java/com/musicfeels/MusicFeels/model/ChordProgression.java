@@ -23,7 +23,7 @@ public class ChordProgression {
     this.notes = notes;
   }
 
-  protected ChordProgression() {
+  public ChordProgression() {
   }
 
   public Integer getId() {
