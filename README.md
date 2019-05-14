@@ -1,5 +1,8 @@
 # MusicFeelsBackend
 
+How to run:
+`mvn spring-boot:run` I had problems if I didn't `mvn clean` beforehand.
+
 Access at: http://localhost:8086/
 
 Maybe use this?:https://auth0.com/blog/integrating-spring-data-jpa-postgresql-liquibase/
