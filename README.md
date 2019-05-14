@@ -34,8 +34,6 @@ https://spring.io/guides/gs/accessing-data-jpa/#initial (A lot of the guides)
 
 http://zetcode.com/springboot/postgresql/
 
-https://www.baeldung.com/intro-to-project-lombok
-
 https://www.baeldung.com/spring-bean
 
 https://www.callicoder.com/spring-boot-jpa-hibernate-postgresql-restful-crud-api-example/

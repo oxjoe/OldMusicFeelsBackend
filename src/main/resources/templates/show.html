@@ -16,12 +16,12 @@
         <th>Name</th>
         <th>Notes</th>
     </tr>
-<!--    <tr th:each="chord : ${ChordProgression}">-->
-<!--        <td th:text="${chord.getId()}">Id</td>-->
-<!--        <td th:text="${chord.number}">Number</td>-->
-<!--        <td th:text="${chord.name}">Name</td>-->
-<!--        <td th:text="${chord.notes}">Notes</td>-->
-<!--    </tr>-->
+    <tr th:each="chord : ${modelCp}">
+        <td th:text="${chord.getId()}">Id</td>
+        <td th:text="${chord.getNumbers()}">Number</td>
+        <td th:text="${chord.getNames()}">Name</td>
+        <td th:text="${chord.getNotes()}">Notes</td>
+    </tr>
 </table>
 
 </body>

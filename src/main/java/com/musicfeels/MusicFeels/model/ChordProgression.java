@@ -1,63 +1,29 @@
 package com.musicfeels.MusicFeels.model;
 
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.Setter;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+//https://www.baeldung.com/intro-to-project-lombok
+
 @Entity
 @Table(name = "chordprogression")
+@Data
 public class ChordProgression {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
+  @Setter(AccessLevel.PROTECTED)
   private Long id;
   private String numbers;
   private String names;
   private String notes;
-
-  public ChordProgression(Long id, String numbers, String names, String notes) {
-    this.id = id;
-    this.numbers = numbers;
-    this.names = names;
-    this.notes = notes;
-  }
-
-  public ChordProgression() {
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  public String getNumbers() {
-    return numbers;
-  }
-
-  public void setNumbers(String numbers) {
-    this.numbers = numbers;
-  }
-
-  public String getNames() {
-    return names;
-  }
-
-  public void setNames(String names) {
-    this.names = names;
-  }
-
-  public String getNotes() {
-    return notes;
-  }
-
-  public void setNotes(String notes) {
-    this.notes = notes;
-  }
 
   @Override
   public String toString() {

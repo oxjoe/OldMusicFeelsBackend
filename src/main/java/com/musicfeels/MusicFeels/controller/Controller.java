@@ -3,6 +3,7 @@ package com.musicfeels.MusicFeels.controller;
 import com.musicfeels.MusicFeels.model.ChordProgression;
 import com.musicfeels.MusicFeels.repository.ChordProgressionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -35,9 +36,16 @@ public class Controller {
   }
 
   @GetMapping(path = "/show")
+  public String getAllChordProgressions(Model model) {
+    model.addAttribute("modelCp", chordProgressionRepository.findAll());
+    return "show";
+  }
+
+  // Returns JSON data
+/*  @GetMapping(path = "/show")
   public @ResponseBody
   Iterable<ChordProgression> getAllChordProgressions() {
     return chordProgressionRepository.findAll();
-  }
+  }*/
 
 }
