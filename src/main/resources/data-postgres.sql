@@ -1,42 +1,39 @@
-INSERT INTO chordprogression (numbers, names, notes)
-VALUES ('1,5', 'C,G', 'Feels strong moving from the root to the fifth')
-        ,
-       ('1,4', 'C,F', 'Moves to the predominant')
-        ,
-       ('4,5', 'F,G', 'Predominant to dominant movement')
-        ,
-       ('1,4,5', 'C,F,G',
-        'This is the normal 1-4-5 progression the overall feeling of it is ''Feels strong moving from the root to the fifth'' ');
---   \echo 'Finished Inserts'
+CREATE OR REPLACE FUNCTION generate_chords() RETURNS void AS
+'
+    DECLARE
+        c          text := '','';
+        u1         text := U&''\2160'';
+        u2         text := U&''\2161'';
+        u3         text := U&''\2162'';
+        u4         text := U&''\2163'';
+        u5         text := U&''\2164'';
+        u6         text := U&''\2165'';
+        u7         text := U&''\2166'';
+        l1         text := U&''\2170'';
+        l2         text := U&''\2171'';
+        l3         text := U&''\2172'';
+        l4         text := U&''\2173'';
+        l5         text := U&''\2174'';
+        l6         text := U&''\2175'';
+        l7         text := U&''\2176'';
+        flat       text := U&''\266D'';
+        natural    text := U&''\266E'';
+        sharp      text := U&''\266F'';
+        diminished text := U&''\00B0'';
 
--- Write a function that will convert the numbers column into the corresponding roman numerals by using PSQL through variables
--- ERROR:  character with byte sequence 0xe2 0x85 0xa0 in encoding "UTF8" has no equivalent in encoding "WIN1252"
--- https://www.postgresql.org/docs/current/multibyte.html
+    BEGIN
+        INSERT INTO chordprogression (numbers, names, notes)
+        VALUES (concat(u1, c, u5), ''C,G'', ''Feels strong moving from the root to the fifth'')
+                ,
+               (concat(u1, c, u4), ''C,F'', ''Moves to the predominant'')
+                ,
+               (concat(u4, c, u5), ''F,G'', ''Predominant to dominant movement'')
+                ,
+               (concat(u1, c, u4, c, u5), ''C,F,G'',
+                ''This is the normal 1-4-5 progression the overall feeling of it is - Feels strong moving from the root to the fifth '');
+    END;
+' language plpgsql;
+SELECT generate_chords();
 
--- select  u&'\2162' || u&'\266D'
--- Ⅲ♭
-
--- INSERT INTO chordprogression (numbers, names, notes)
--- VALUES (U&'\2170' ||  ',' || U&'\2170', 'C,G', 'Feels strong moving from the root to the fifth');
--- 	ⅰ,ⅰ	C,G	      Feels strong moving from the root to the fifth
-
--- const rnONE = U&'\2160'
--- const rnTWO = U&'\2161'
--- const rnTHREE = U&'\2162'
--- const rnFOUR = U&'\2163'
--- const rnFIVE = U&'\2164'
--- const rnSIX = U&'\2165'
--- const rnSEVEN = U&'\2166'
-
--- const rnOne = U&'\2170'
--- const rnTwo = U&'\2171'
--- const rnThree = U&'\2172'
--- const rnFour = U&'\2173'
--- const rnFive = U&'\2174'
--- const rnSix = U&'\2175'
--- const rnSeven = U&'\2176'
-
--- const flat = U&'\266D'
--- const natural = U&'\266E'
--- const sharp = U&'\266F'
--- const diminished = U&'\00B0'
+-- https://github.com/spring-projects/spring-boot/issues/6217
+-- https://stackoverflow.com/questions/52228470/exception-in-jpa-when-using-seed-file-for-postgresql
