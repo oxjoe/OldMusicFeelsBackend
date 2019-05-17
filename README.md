@@ -38,3 +38,5 @@ https://www.baeldung.com/spring-bean
 
 https://www.callicoder.com/spring-boot-jpa-hibernate-postgresql-restful-crud-api-example/
 
+https://www.baeldung.com/spring-boot-angular-web
+

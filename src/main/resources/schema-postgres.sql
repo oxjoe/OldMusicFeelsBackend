@@ -3,6 +3,7 @@
 -- \c postgres;
 -- DROP DATABASE data;
 -- CREATE DATABASE data;
+SET CLIENT_ENCODING TO 'UTF8';
 DROP TABLE IF EXISTS chordprogression;
 CREATE TABLE chordprogression
 (

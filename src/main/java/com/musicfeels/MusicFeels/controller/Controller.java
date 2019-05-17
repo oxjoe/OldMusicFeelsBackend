@@ -4,24 +4,16 @@ import com.musicfeels.MusicFeels.model.ChordProgression;
 import com.musicfeels.MusicFeels.repository.ChordProgressionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 
 @org.springframework.stereotype.Controller
+@CrossOrigin(origins = "localhost:4200", maxAge = 3600)
+@RequestMapping("/")
 public class Controller {
 
   @Autowired
   private ChordProgressionRepository chordProgressionRepository;
-
-//  @GetMapping("/showChordProgressions")
-//  public String findChords(Model model) {
-//    model.addAttribute("Model added Chord", chordProgression.findAll());
-//    return "showChordProgressions";
-//
-//  }
 
   @GetMapping(path = "/add")
   public @ResponseBody
@@ -42,10 +34,10 @@ public class Controller {
   }
 
   // Returns JSON data
-/*  @GetMapping(path = "/show")
+  @GetMapping(path = "/data")
   public @ResponseBody
   Iterable<ChordProgression> getAllChordProgressions() {
     return chordProgressionRepository.findAll();
-  }*/
+  }
 
 }
