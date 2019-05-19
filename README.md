@@ -1,14 +1,22 @@
 # MusicFeelsBackend
 
+## Need to interpolation for Angular HTML dom
+
 How to run:
-`mvn spring-boot:run` I had problems if I didn't `mvn clean` beforehand.
+
+**Java/PostgreSQL/Backend**: `mvn spring-boot:run` I had problems if I didn't `mvn clean` beforehand but YMMV.
 
 Access at: http://localhost:8086/
 
-Maybe use this?:https://auth0.com/blog/integrating-spring-data-jpa-postgresql-liquibase/
+**Angular7/Frontend**: `ng serve -o`
+
+Access at: http://localhost:4200/
+
+<br>
 
 ##### ToDo
 
+- [ ] Test driven design
 - [ ] Incorporate tests (put spring-test back into pom)
 ---
 
