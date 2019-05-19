@@ -14,19 +14,6 @@ public class Controller {
 
   @Autowired
   private ChordProgressionRepository chordProgressionRepository;
-
-  @GetMapping(path = "/add")
-  public @ResponseBody
-  String addNewChord(@RequestParam String numbers, @RequestParam String names, @RequestParam String notes) {
-    ChordProgression cp = new ChordProgression();
-    cp.setNumbers(numbers);
-    cp.setNames(names);
-    cp.setNotes(notes);
-
-    chordProgressionRepository.save(cp);
-    return "Saved";
-  }
-
   @GetMapping(path = "/show")
   public String getAllChordProgressions(Model model) {
     model.addAttribute("modelCp", chordProgressionRepository.findAll());
