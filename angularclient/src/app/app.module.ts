@@ -6,7 +6,6 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { ChordListComponent } from './chord-list/chord-list.component';
-import { ChordFormComponent } from './chord-form/chord-form.component';
 import {ChordService} from "./service/chord.service";
 import { NavComponent } from './nav/nav.component';
 import { MainComponent } from './main/main.component';
@@ -16,7 +15,6 @@ import { MainComponent } from './main/main.component';
   declarations: [
     AppComponent,
     ChordListComponent,
-    ChordFormComponent,
     NavComponent,
     MainComponent
   ],

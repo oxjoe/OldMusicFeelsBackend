@@ -1,11 +1,16 @@
-<app-nav></app-nav>
-
-<!--Need to BOOTSTRAP out my columns and rows and stuff -->
-<!-- * Need to BOOTSTRAP out my columns and rows and stuff -->
-<!-- ? Need to BOOTSTRAP out my columns and rows and stuff -->
-<!-- TODO Need to BOOTSTRAP out my columns and rows and stuff -->
-<app-chord-list></app-chord-list>
-<app-main></app-main>
+<div class="container-fluid">
+  <div class="row">
+    <header><app-nav></app-nav></header>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <app-chord-list></app-chord-list>
+    </div>
+    <div class="col-md-auto">
+      <app-main></app-main>
+    </div>
+  </div>
+</div>
 <section>
   <router-outlet></router-outlet>
 </section>

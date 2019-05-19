@@ -18,8 +18,5 @@ export class ChordService {
   public findAll(): Observable<Chord[]> {
     return this.http.get<Chord[]>(this.chordsUrl);
   }
-  public save(chord: Chord) {
-    return this.http.post<Chord>(this.chordsUrl, chord);
-  }
 
 }
