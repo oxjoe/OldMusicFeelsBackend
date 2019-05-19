@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @org.springframework.stereotype.Controller
-@CrossOrigin(origins = "localhost:4200", maxAge = 3600)
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/")
 public class Controller {
 
@@ -35,8 +35,8 @@ public class Controller {
 
   // Returns JSON data
   @GetMapping(path = "/data")
-  public @ResponseBody
-  Iterable<ChordProgression> getAllChordProgressions() {
+  @ResponseBody
+  public Iterable<ChordProgression> getAllChordProgressions() {
     return chordProgressionRepository.findAll();
   }
 

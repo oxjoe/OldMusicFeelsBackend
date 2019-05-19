@@ -1,0 +1,23 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Number</th>
+        <th scope="col">Name</th>
+        <th scope="col">Notes</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let chord of chords">
+        <td>{{ chord.id }}</td>
+        <td>{{ chord.numbers }}</td>
+        <td>{{ chord.names }}</td>
+        <td>{{ chord.notes }}</td>
+        <!--        <td><a href="mailto:{{ user.email }}">{{ user.email }}</a></td>-->
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

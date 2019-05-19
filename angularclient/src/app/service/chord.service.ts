@@ -6,6 +6,7 @@ import {Chord} from "../model/chord";
 @Injectable({
   providedIn: 'root'
 })
+
 export class ChordService {
 
   private chordsUrl: string;
