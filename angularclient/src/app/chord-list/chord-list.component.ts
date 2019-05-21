@@ -10,11 +10,14 @@ import { ChordService } from "../service/chord.service";
 export class ChordListComponent implements OnInit {
   chords: Chord[];
 
-  constructor(private chordService: ChordService) {}
+  constructor(private chordService: ChordService) { }
 
   ngOnInit() {
     this.chordService.findAll().subscribe(data => {
       this.chords = data;
     });
+  }
+  clickChordFromList() {
+    console.log("clicked ");
   }
 }

@@ -1,25 +1,29 @@
 <!-- <a routerLink="/differentLink">title</a> -->
 <!-- * give class card 'my-5' to add space between nav bar and the table -->
-<!-- ! Use list grooup component isntead -->
-<div class="card">
-  <div class="card-body">
-    <table class="table table-bordered table-striped">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col">Id</th>
-          <th scope="col">Number</th>
-          <th scope="col">Name</th>
-          <th scope="col">Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let chord of chords">
-          <td>{{ chord.id }}</td>
-          <td>{{ chord.numbers }}</td>
-          <td>{{ chord.names }}</td>
-          <td>{{ chord.notes }}</td>
-        </tr>
-      </tbody>
-    </table>
+<!-- https://angular.io/tutorial/toh-pt2 -->
+<div>
+  <div class="card">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Number</th>
+            <th scope="col">Name</th>
+            <th scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let chord of chords">
+            <td (click)="clickChordFromList()">
+              {{ chord.id }}
+            </td>
+            <td>{{ chord.numbers }}</td>
+            <td>{{ chord.names }}</td>
+            <td>{{ chord.notes }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

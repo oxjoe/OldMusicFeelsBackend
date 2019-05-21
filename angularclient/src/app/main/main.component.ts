@@ -6,11 +6,15 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./main.component.scss"]
 })
 export class MainComponent implements OnInit {
-  constructor() {}
 
-  ngOnInit() {}
+  noteInter: string = 'testing noteInter via main.component.ts'
+  test: string;
 
-  firstClick() {
-    console.log("Generate a new Chord");
+  constructor() { }
+
+  ngOnInit() { }
+
+  generate() {
+    console.log("id clicked");
   }
 }

@@ -1,36 +1,22 @@
-<button (click)="generate()">Generate Chord and Attach</button>
-<br />
-<br />
-<div id="chord-0" class="node">
-  <!-- r1: &#8544; -->
-  <div class="roman-num">r1</div>
-  <!-- circle-major will change depending on keyname -->
-  <div class="circle circle-major">
-    <div class="name">HTML C</div>
+<div>
+  <button (click)="generate()">Generate Chord and Attach</button>
+  <br />
+  <div class="exampleNote">
+    {{ noteInter }}
   </div>
-</div>
+  <br />
+  <input [(ngModel)]="keypress" placeholder="key being pressed" />
+  <!-- So when I hit a key, I need to generate a chord -->
+  <p>The currrent key being pressed: {{ keypress }}</p>
+  <br />
 
-<div class="description-container">
-  <label>HTML M1 to m3</label>
-  <div class="arrow">----></div>
-</div>
-
-<div id="chord-1" class="node">
-  <!-- https://www.toptal.com/designers/htmlarrows/numbers/roman-numeral-one/ -->
-  <div class="roman-num">r3</div>
-  <div class="circle circle-minor">
-    <div class="name">HTML Em</div>
+  <div *ngIf="keypress">
+    <!-- How do i pass the key press to the chord ndoe -->
+    <!-- Treat teach circle note as a seperate component and generate it -->
+    <!-- <app-chord-item></app-chord-item> -->
+    <!-- https://youtu.be/Fdf5aTYRW0E?t=2134 -->
+    <app-chord-node [chordNameKeypress]="keypress"></app-chord-node>
   </div>
-</div>
 
-<div class="description-container">
-  <label>HTML m3 to M4</label>
-  <div class="arrow">----></div>
-</div>
-
-<div id="chord-2" class="node">
-  <div class="roman-num">r4</div>
-  <div class="circle circle-major">
-    <div class="name">HTML Fadd9</div>
-  </div>
+  <br />
 </div>

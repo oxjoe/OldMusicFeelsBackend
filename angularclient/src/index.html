@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="myApp" ng-controller="myCtrl" lang="en">
   <head>
     <meta charset="utf-8" />
     <title>MusicFeels (title is in Index.html)</title>
@@ -14,7 +14,8 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <!-- ! https://stackoverflow.com/questions/46329525/how-to-get-keypress-if-press-a-key-anywhere-in-the-document -->
+  <body keypress-detector>
     <app-root></app-root>
   </body>
 </html>

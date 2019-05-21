@@ -1,16 +1,19 @@
-<div class="container-fluid">
-  <div class="row">
-    <header><app-nav></app-nav></header>
-  </div>
-  <div class="row">
-    <div class="col-md-4">
-      <app-chord-list></app-chord-list>
+<!-- https://stackoverflow.com/questions/46329525/how-to-get-keypress-if-press-a-key-anywhere-in-the-document -->
+<main keypress-detector>
+  <div class="container-fluid">
+    <div class="row">
+      <header><app-nav></app-nav></header>
     </div>
-    <div class="col-md-auto">
-      <app-main></app-main>
+    <div class="row">
+      <div class="col-md-4">
+        <app-chord-list></app-chord-list>
+      </div>
+      <div class="col-md-auto">
+        <app-main></app-main>
+      </div>
     </div>
   </div>
-</div>
-<section>
-  <router-outlet></router-outlet>
-</section>
+  <section>
+    <router-outlet></router-outlet>
+  </section>
+</main>
