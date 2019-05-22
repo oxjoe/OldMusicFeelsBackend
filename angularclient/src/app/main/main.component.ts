@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Chord } from './../model/chord';
+import { Component, OnInit, Output } from "@angular/core";
 
 @Component({
   selector: "app-main",
@@ -6,15 +7,16 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./main.component.scss"]
 })
 export class MainComponent implements OnInit {
-
+  chord: Chord[];
   noteInter: string = 'testing noteInter via main.component.ts'
-  test: string;
+  chordNameKeypress: string;
 
   constructor() { }
 
   ngOnInit() { }
 
-  generate() {
-    console.log("id clicked");
+  addChordNode(chord: Chord) {
+    console.log(chord);
   }
+
 }

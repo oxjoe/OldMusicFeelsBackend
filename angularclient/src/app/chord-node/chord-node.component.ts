@@ -1,3 +1,4 @@
+import { AddChordNodeComponent } from './../add-chord-node/add-chord-node.component';
 import { MainComponent } from './../main/main.component';
 import { Chord } from './../model/chord';
 import { Component, OnInit, Input } from '@angular/core';
@@ -9,8 +10,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ChordNodeComponent implements OnInit {
   @Input()
-  chordNameKeypress: string;
-
+  chordBeingPassed: string;
   constructor() {
   }
 

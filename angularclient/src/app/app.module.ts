@@ -10,6 +10,7 @@ import { ChordService } from "./service/chord.service";
 import { NavComponent } from './nav/nav.component';
 import { MainComponent } from './main/main.component';
 import { ChordNodeComponent } from './chord-node/chord-node.component';
+import { AddChordNodeComponent } from './add-chord-node/add-chord-node.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ChordNodeComponent } from './chord-node/chord-node.component';
     ChordListComponent,
     NavComponent,
     MainComponent,
-    ChordNodeComponent
+    ChordNodeComponent,
+    AddChordNodeComponent,
   ],
   imports: [
     BrowserModule,
