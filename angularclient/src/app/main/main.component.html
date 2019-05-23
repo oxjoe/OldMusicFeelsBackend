@@ -1,12 +1,5 @@
 <div>
-  <app-add-chord-node
-    (addChordNode)="addChordNode($event)"
-  ></app-add-chord-node>
-  <!-- How do i pass the key press to the chord ndoe -->
-  <!-- Treat teach circle note as a seperate component and generate it -->
-  <!-- https://youtu.be/Fdf5aTYRW0E?t=2134 -->
-  <p>{{ this.chord }}</p>
-  <app-chord-node [chordBeingPassed]="this.chord"> </app-chord-node>
-  <p>"SLFJKSKLJFKLJ"</p>
+  <app-add-chord-node> </app-add-chord-node>
+  <app-chord-node></app-chord-node>
 </div>
 <!-- ! I need to pass this.chord to anotehr cmponent the app-chord-note comp -->

@@ -8,15 +8,12 @@ import { Component, OnInit, Output } from "@angular/core";
 })
 export class MainComponent implements OnInit {
   chord: Chord[];
-  noteInter: string = 'testing noteInter via main.component.ts'
-  chordNameKeypress: string;
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
 
-  addChordNode(chord: Chord) {
-    console.log(chord);
   }
+
 
 }

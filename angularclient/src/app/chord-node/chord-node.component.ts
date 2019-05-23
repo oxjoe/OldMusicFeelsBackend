@@ -9,12 +9,15 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./chord-node.component.scss']
 })
 export class ChordNodeComponent implements OnInit {
-  @Input()
-  chordBeingPassed: string;
+  keypress: string;
   constructor() {
   }
 
   ngOnInit() {
   }
+  receiveChordEvent($event) {
+    console.log("Recieved Chord Event");
 
+    this.keypress = $event;
+  }
 }
