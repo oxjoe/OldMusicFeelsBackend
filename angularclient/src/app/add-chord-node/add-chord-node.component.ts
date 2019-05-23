@@ -17,8 +17,10 @@ export class AddChordNodeComponent implements OnInit {
   ) {
   }
 
+
   onSubmit() {
     console.log('About to emit the keypress which is:', this.keypress);
+    // So onSubmit I create a chord node and display it
     this.addChordEvent.emit(this.keypress)
   }
 

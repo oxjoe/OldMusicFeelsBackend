@@ -1,5 +1,5 @@
-<p>chord-node-component showing</p>
-<div class="node" (addChordEvent)="receiveChordEvent($event)">
+<p>chord-node-component showing below</p>
+<div class="node" (addChordEvent)="receiveChordEvent($event)" *ngIf="keypress">
   <div class="num">1</div>
   <div class="name">Keypress = {{ keypress }}</div>
   <div class="notes">blah blah blah</div>

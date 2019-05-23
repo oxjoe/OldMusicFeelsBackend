@@ -1,10 +1,12 @@
 <!-- ! Have to use an array like todos -->
-<form class="form" (ngSubmit)="onSubmit()">
-  <input
-    type="text"
-    name="input-name"
-    [(ngModel)]="keypress"
-    placeholder="Add chord"
-  />
-  <input type="submit" value="Submit" class="btn" />
-</form>
+<div>
+  <form class="form" (ngSubmit)="onSubmit()">
+    <input
+      type="text"
+      name="input-name"
+      [(ngModel)]="keypress"
+      placeholder="Add chord"
+    />
+    <input type="submit" value="Submit" class="btn" />
+  </form>
+</div>

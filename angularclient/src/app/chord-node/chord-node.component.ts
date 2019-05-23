@@ -17,7 +17,8 @@ export class ChordNodeComponent implements OnInit {
   }
   receiveChordEvent($event) {
     console.log("Recieved Chord Event");
-
     this.keypress = $event;
+    // ! So now i have to actually geenerate via keypress
+    // ! Move on and pretend there is a node there already.
   }
 }
