@@ -13,8 +13,7 @@ export class AddChordNodeComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(
-  ) {
+  ngOnInit() {
   }
 
 

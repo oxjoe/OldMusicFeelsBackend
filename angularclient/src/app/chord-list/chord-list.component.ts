@@ -8,13 +8,13 @@ import { ChordService } from "../service/chord.service";
   styleUrls: ["./chord-list.component.scss"]
 })
 export class ChordListComponent implements OnInit {
-  chords: Chord[];
+  chordsDatabase: Chord[];
 
   constructor(private chordService: ChordService) { }
 
   ngOnInit() {
     this.chordService.findAll().subscribe(data => {
-      this.chords = data;
+      this.chordsDatabase = data;
     });
   }
   clickChordFromList() {

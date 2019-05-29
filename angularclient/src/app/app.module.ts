@@ -11,6 +11,7 @@ import { NavComponent } from './nav/nav.component';
 import { MainComponent } from './main/main.component';
 import { ChordNodeComponent } from './chord-node/chord-node.component';
 import { AddChordNodeComponent } from './add-chord-node/add-chord-node.component';
+import { ChordArrayComponent } from './chord-array/chord-array.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { AddChordNodeComponent } from './add-chord-node/add-chord-node.component
     MainComponent,
     ChordNodeComponent,
     AddChordNodeComponent,
+    ChordArrayComponent,
   ],
   imports: [
     BrowserModule,
